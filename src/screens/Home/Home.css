@@ -1,0 +1,68 @@
+.home-container {
+    position: relative;
+}
+
+.about-container {
+    position: absolute;
+    border: 1px solid #9987fc;
+    margin-left: 350px;
+    margin-right: 40px;
+    top: 0px;
+    border-radius: 25px;
+    width: 60vw;
+    height: 100vh;
+    padding: 25px 30px;
+    font-family: "Cambria";
+    background-color: #ac9ef8;
+    color: rgba(255, 255, 255, 0.833);
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.about-container h1 {
+    color: white;
+    margin-bottom: 0;
+}
+
+#experience-years {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+#experience-company-name {
+    color: white;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+#experience-role {
+    margin-top: 0;
+}
+
+#experience-skills span {
+	background-color: white;
+	color: #9987fc;
+	padding: 3px 13px;
+	border-radius: 30px;
+	display: inline-block;
+	margin: 10px 10px 15px 0px;
+    font-weight: 700;
+}
+
+#project-name {
+    color: white;
+    font-weight: 800;
+}
+
+#projects-screenshot {
+    padding-right: 25px;
+}
+
+#project-photo {
+    width: 170px;
+    height: 110px;
+}
