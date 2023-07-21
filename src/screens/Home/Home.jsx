@@ -1,14 +1,41 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./Home.css";
-import Header from "../../components/Header/Header";
+import Avatar from "../../assets/aboutme.jpg";
 import Project1 from "../../assets/fulltank.png";
+import { FiExternalLink } from "react-icons/fi";
+import { TfiEmail } from "react-icons/tfi";
+import { SiLinkedin } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
 
 const Home = () => {
   return (
     <div className="home-container">
-      <Header />
+      <div className="header-container">
+        <img src={Avatar} id="header-avatar" alt="" />
+        <h1>Jennifer Dinh</h1>
+        <div className="header-links">
+          <HashLink smooth to="#about-me-hashlink">About</HashLink>
+          <Link>Resume</Link>
+          <HashLink smooth to="#experience-hashlink">Experience</HashLink>
+          <HashLink smooth to="#project-hashlink">Projects</HashLink>
+        </div>
+        <div className="header-socials">
+          <Link to="mailto:jenniferdinh1997@gmail.com">
+            <TfiEmail />
+          </Link>
+          <Link to="https://www.linkedin.com/in/dinh-jennifer/" target="_blank">
+            <SiLinkedin />
+          </Link>
+          <Link to="https://github.com/jenniferdinh1997" target="_blank">
+            <FaGithub />
+          </Link>
+        </div>
+      </div>
+
       <div className="about-container">
-        <h1>About Me</h1>
+        <h1 id="about-me-hashlink">About Me</h1>
         <p>
           Back in 2020 I graduated college and had to ask myself what I wanted
           to do with the rest of my life that would bring me both joy and
@@ -21,7 +48,7 @@ const Home = () => {
           the latest thriller.
         </p>
 
-        <h1>Experience</h1>
+        <h1 id="experience-hashlink">Experience</h1>
         <table className="experience-container">
           <tr>
             <td id="experience-years">
@@ -34,29 +61,32 @@ const Home = () => {
                 Delivered high-quality production code and spearheaded
                 end-to-end software development life cycle with a strong focus
                 on quality and efficiency. Ensured the successful implementation
-                of all main functionalities and orchestrated the seamless
+                of all main functionalities (account management, authentication, 
+                financial records, delivery order flow) and orchestrated the seamless
                 integration of individual components.
               </p>
               <div id="experience-skills">
                 <span>React</span>
+                <span>Typescript</span>
                 <span>Spring Boot</span>
                 <span>PostgreSQL</span>
                 <span>Jooq</span>
-                <span>Typescript</span>
               </div>
             </td>
           </tr>
         </table>
 
-        <h1>Projects</h1>
+        <h1 id="project-hashlink">Projects</h1>
         <table className="projects-container">
           <tr id="project-section">
             <td id="projects-screenshot"></td>
             <td>
-              <p id="project-name">TBD</p>
+              <p id="project-name">
+                TBD &nbsp; <FiExternalLink />
+              </p>
               <p>
                 Web scraping application to automate restaurant reservations
-                based on a user's Yelp collection. 
+                based on a user's Yelp collection.
               </p>
               <div id="experience-skills">
                 <span>Django</span>
@@ -67,7 +97,14 @@ const Home = () => {
           <tr id="project-section">
             <td id="projects-screenshot"></td>
             <td>
-              <p id="project-name">Healthshare</p>
+              <p id="project-name">
+                <Link
+                  to="https://on-time-pink.vercel.app/login"
+                  target="_blank"
+                >
+                  Healthshare &nbsp; <FiExternalLink />
+                </Link>
+              </p>
               <p>
                 Inspired by Uber Health, Healthshare is a patient centered
                 rideshare application that aims too match patients and drivers
@@ -85,10 +122,21 @@ const Home = () => {
           </tr>
           <tr id="project-section">
             <td id="projects-screenshot">
-              <img src={Project1} id="project-photo" />
+              <img
+                src={Project1}
+                id="project-photo"
+                alt="fullTank Project Screenshot"
+              />
             </td>
             <td>
-              <p id="project-name">fullTank</p>
+              <p id="project-name">
+                <Link
+                  to="https://github.com/jenniferdinh1997/fullTank"
+                  target="_blank"
+                >
+                  fullTank &nbsp; <FiExternalLink />
+                </Link>
+              </p>
               <p>
                 A gas price tracking applicaiton that aims to give users
                 up-to-date pricing information across a network of user-added
@@ -102,6 +150,10 @@ const Home = () => {
             </td>
           </tr>
         </table>
+      </div>
+
+      <div className="footer-container">
+        <p>Built with React.js and deployed on Vercel</p>
       </div>
     </div>
   );
