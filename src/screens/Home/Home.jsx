@@ -4,6 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import "./Home.css";
 import Avatar from "../../assets/aboutme.jpg";
 import Project1 from "../../assets/fulltank.png";
+import Project2 from "../../assets/healthshare.png";
 import { FiExternalLink } from "react-icons/fi";
 import { TfiEmail } from "react-icons/tfi";
 import { SiLinkedin } from "react-icons/si";
@@ -16,10 +17,10 @@ const Home = () => {
         <img src={Avatar} id="header-avatar" alt="" />
         <h1>Jennifer Dinh</h1>
         <div className="header-links">
-          <HashLink smooth to="#about-me-hashlink">About</HashLink>
+          <HashLink smooth to="#about-me">About</HashLink>
           <Link>Resume</Link>
-          <HashLink smooth to="#experience-hashlink">Experience</HashLink>
-          <HashLink smooth to="#project-hashlink">Projects</HashLink>
+          <HashLink smooth to="#experience">Experience</HashLink>
+          <HashLink smooth to="#project">Projects</HashLink>
         </div>
         <div className="header-socials">
           <Link to="mailto:jenniferdinh1997@gmail.com">
@@ -35,7 +36,7 @@ const Home = () => {
       </div>
 
       <div className="about-container">
-        <h1 id="about-me-hashlink">About Me</h1>
+        <h1 id="about-me">About Me</h1>
         <p>
           Back in 2020 I graduated college and had to ask myself what I wanted
           to do with the rest of my life that would bring me both joy and
@@ -48,7 +49,7 @@ const Home = () => {
           the latest thriller.
         </p>
 
-        <h1 id="experience-hashlink">Experience</h1>
+        <h1 id="experience">Experience</h1>
         <table className="experience-container">
           <tr>
             <td id="experience-years">
@@ -76,13 +77,13 @@ const Home = () => {
           </tr>
         </table>
 
-        <h1 id="project-hashlink">Projects</h1>
+        <h1 id="project">Projects</h1>
         <table className="projects-container">
           <tr id="project-section">
             <td id="projects-screenshot"></td>
             <td>
               <p id="project-name">
-                TBD &nbsp; <FiExternalLink />
+                Work in Progress &nbsp; <FiExternalLink />
               </p>
               <p>
                 Web scraping application to automate restaurant reservations
@@ -95,7 +96,13 @@ const Home = () => {
             </td>
           </tr>
           <tr id="project-section">
-            <td id="projects-screenshot"></td>
+            <td id="projects-screenshot">
+              <img
+                src={Project2}
+                id="project-photo"
+                alt="Healthshare Project Screenshot"
+              />
+            </td>
             <td>
               <p id="project-name">
                 <Link
@@ -138,7 +145,7 @@ const Home = () => {
                 </Link>
               </p>
               <p>
-                A gas price tracking applicaiton that aims to give users
+                A gas price tracking application that aims to give users
                 up-to-date pricing information across a network of user-added
                 gas stations across the United States.
               </p>
@@ -150,10 +157,6 @@ const Home = () => {
             </td>
           </tr>
         </table>
-      </div>
-
-      <div className="footer-container">
-        <p>Built with React.js and deployed on Vercel</p>
       </div>
     </div>
   );
