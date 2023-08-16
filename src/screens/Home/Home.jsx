@@ -5,10 +5,12 @@ import "./Home.css";
 import Avatar from "../../assets/aboutme.jpg";
 import Project1 from "../../assets/fulltank.png";
 import Project2 from "../../assets/healthshare.png";
+import Project3 from "../../assets/resbot.png";
 import { FiExternalLink } from "react-icons/fi";
 import { TfiEmail } from "react-icons/tfi";
 import { SiLinkedin } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
+import Resume from "../../assets/Resume.pdf";
 
 const Home = () => {
   return (
@@ -17,10 +19,16 @@ const Home = () => {
         <img src={Avatar} id="header-avatar" alt="" />
         <h1>Jennifer Dinh</h1>
         <div className="header-links">
-          <HashLink smooth to="#about-me">About</HashLink>
-          <Link>Resume</Link>
-          <HashLink smooth to="#experience">Experience</HashLink>
-          <HashLink smooth to="#project">Projects</HashLink>
+          <HashLink smooth to="#about-me">
+            About
+          </HashLink>
+          <Link to={Resume} target = "_blank">Resume</Link>
+          <HashLink smooth to="#experience">
+            Experience
+          </HashLink>
+          <HashLink smooth to="#project">
+            Projects
+          </HashLink>
         </div>
         <div className="header-socials">
           <Link to="mailto:jenniferdinh1997@gmail.com">
@@ -56,15 +64,29 @@ const Home = () => {
               <p>Aug 2022 - Present</p>
             </td>
             <td id="experience-description">
-              <p id="experience-company-name">TomorrowDragon</p>
-              <p id="experience-role">Full Stack Engineer</p>
+              <p id="experience-role">Full Stack Software Engineer</p>
+              <p id="experience-company-name">TomorrowDragon · Remote</p>
               <p>
-                Delivered high-quality production code and spearheaded
-                end-to-end software development life cycle with a strong focus
-                on quality and efficiency. Ensured the successful implementation
-                of all main functionalities (account management, authentication, 
-                financial records, delivery order flow) and orchestrated the seamless
-                integration of individual components.
+                I worked with a team of 5 engineers to develop a food delivery
+                service application from the ground up. In addition to managing
+                the API documentation and assigning backlog tasks, I was heavily
+                involved in the creation of the platform and produced over 70%
+                of the company's codebase.
+              </p>
+              <p>Some of the projects that I've worked on include:</p>
+              <p>
+                - Custom algorithm to determine driver payments and delivery
+                assignments based on geographical location and traffic
+              </p>
+              <p>
+                - Integration of Stripe API for payment processing and credit
+                card management
+              </p>
+              <p>- Google/Facebook Single Sign-On</p>
+              <p>
+                - End to end implementation of all main functionalities (account
+                management, authentication, financial records, delivery order
+                flow, custom menu creation)
               </p>
               <div id="experience-skills">
                 <span>React</span>
@@ -80,10 +102,21 @@ const Home = () => {
         <h1 id="project">Projects</h1>
         <table className="projects-container">
           <tr id="project-section">
-            <td id="projects-screenshot"></td>
+            <td id="projects-screenshot">
+              <img
+                src={Project3}
+                id="project-photo-3"
+                alt="ResBot Project Screenshot"
+              />
+            </td>
             <td>
               <p id="project-name">
-                Work in Progress &nbsp; <FiExternalLink />
+                <Link
+                  to="https://github.com/jenniferdinh1997/reservation-bot"
+                  target="_blank"
+                >
+                  Res Bot &nbsp; <FiExternalLink />
+                </Link>
               </p>
               <p>
                 Web scraping application to automate restaurant reservations
@@ -114,7 +147,7 @@ const Home = () => {
               </p>
               <p>
                 Inspired by Uber Health, Healthshare is a patient centered
-                rideshare application that aims too match patients and drivers
+                rideshare application that aims to match patients and drivers
                 based on language preferences and accessibility to prevent
                 communication barriers and ease transporation obstacles.
               </p>

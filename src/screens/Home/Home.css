@@ -100,16 +100,18 @@
     flex-direction: column;
     justify-content:flex-start;
     padding-right: 10px;
+    width: 100px;
 }
 
 #experience-company-name {
-    color: white;
-    font-weight: 800;
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 #experience-role {
-    margin-top: 0;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 0;
 }
 
 #experience-skills span {
@@ -165,7 +167,12 @@
 
 #project-photo {
     width: 170px;
-    height: 110px;
+    height: 120px;
+}
+
+#project-photo-3 {
+    width: 170px;
+    height: 150px;
 }
 
 .footer-container {
