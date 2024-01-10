@@ -6,6 +6,7 @@ import Avatar from "../../assets/aboutme.jpg";
 import Project1 from "../../assets/fulltank.png";
 import Project2 from "../../assets/healthshare.png";
 import Project3 from "../../assets/resbot.png";
+import Project4 from "../../assets/jas.png";
 import { FiExternalLink } from "react-icons/fi";
 import { TfiEmail } from "react-icons/tfi";
 import { SiLinkedin } from "react-icons/si";
@@ -22,7 +23,9 @@ const Home = () => {
           <HashLink smooth to="#about-me">
             About
           </HashLink>
-          <Link to={Resume} target = "_blank">Resume</Link>
+          <Link to={Resume} target="_blank">
+            Resume
+          </Link>
           <HashLink smooth to="#experience">
             Experience
           </HashLink>
@@ -61,7 +64,26 @@ const Home = () => {
         <table className="experience-container">
           <tr>
             <td id="experience-years">
-              <p>Aug 2022 - Present</p>
+              <p>Dec 2023 - Present</p>
+            </td>
+            <td id="experience-description">
+              <p id="experience-role">Software Engineer</p>
+              <p id="experience-company-name">KLOTOFY · Remote</p>
+              <p>KLOTOFY is a fashion discovery app dedicated to help you find
+                clothes that fit on your body, not the model on the screen.
+              </p>
+              {/* <div id="experience-skills">
+                <span>React</span>
+                <span>Typescript</span>
+                <span>Spring Boot</span>
+                <span>PostgreSQL</span>
+                <span>Jooq</span>
+              </div> */}
+            </td>
+          </tr>
+          <tr>
+            <td id="experience-years">
+              <p>Aug 2022 - Nov 2023</p>
             </td>
             <td id="experience-description">
               <p id="experience-role">Full Stack Software Engineer</p>
@@ -104,6 +126,31 @@ const Home = () => {
           <tr id="project-section">
             <td id="projects-screenshot">
               <img
+                src={Project4}
+                id="project-photo"
+                alt="ResBot Project Screenshot"
+              />
+            </td>
+            <td>
+              <p id="project-name">
+                <Link
+                  to="https://jaz-portfolio.vercel.app/"
+                  target="_blank"
+                >
+                  Jasmine Li &nbsp; <FiExternalLink />
+                </Link>
+              </p>
+              <p>
+                Custom portfolio website for project management client.
+              </p>
+              <div id="experience-skills">
+                <span>React.js</span>
+              </div>
+            </td>
+          </tr>
+          <tr id="project-section">
+            <td id="projects-screenshot">
+              <img
                 src={Project3}
                 id="project-photo-3"
                 alt="ResBot Project Screenshot"
@@ -114,6 +161,7 @@ const Home = () => {
                 <Link
                   to="https://github.com/jenniferdinh1997/reservation-bot"
                   target="_blank"
+                  id="project-name"
                 >
                   Res Bot &nbsp; <FiExternalLink />
                 </Link>
@@ -141,6 +189,7 @@ const Home = () => {
                 <Link
                   to="https://on-time-pink.vercel.app/login"
                   target="_blank"
+                  id="project-name"
                 >
                   Healthshare &nbsp; <FiExternalLink />
                 </Link>
@@ -173,6 +222,7 @@ const Home = () => {
                 <Link
                   to="https://github.com/jenniferdinh1997/fullTank"
                   target="_blank"
+                  id="project-name"
                 >
                   fullTank &nbsp; <FiExternalLink />
                 </Link>

@@ -126,6 +126,7 @@
 
 .projects-container {
     border-collapse: collapse;
+    margin-top: 15px;
 }
 
 .projects-container td:last-child {
